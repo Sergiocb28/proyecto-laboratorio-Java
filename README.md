@@ -8,13 +8,13 @@ Aquí debes añadir la descripción del dataset y un enunciado del dominio del p
 ## Estructura de las carpetas del proyecto
 
 * **/src**: Contiene los diferentes archivos que forman parte del proyecto. Debe estar estructurado en los siguentes paquetes
-  * **fp.dominio**: Paquete que contiene los tipos del proyecto.
-  * **fp.dominio.test**: Paquete que contiene las clases de test del proyecto.
-  * **fp.common**: Paquete que contiene los tipos auxiliares del proyecto
-  * **fp.utiles**:  Paquete que contiene las clases de utilidad. 
-* **/data**: Contiene el dataset o datasets del proyecto
-    * **dataset1.csv**: Añade una descripción genérica del dataset.
-    * **dataset2.csv**: Añade una descripción del resto de datasets que puedas tener.
+  * **fp.utiles.Sneaker**: Paquete que contiene los tipos del proyecto.
+  * **fp.utiles.Sneakers.test**: Paquete que contiene las clases de test del proyecto.
+  * **fp.utiles.TipoTalla**: Paquete que contiene los tipos auxiliares del proyecto
+  * **fp.utiles.Checkers**:  Paquete que contiene las clases de utilidad. 
+* **/data**: Contiene el dataset del proyecto
+    * **data/StockX-Data-Contest-2019-3.csv**: El dataset contiene el csv que trata sobre la app Stock-X
+    
     
 ## Estructura del *dataset*
 
@@ -22,8 +22,15 @@ El dataset contiene el csv que trata sobre la app Stock-X, que a su vez trata so
 C:\Users\seery\OneDrive\Escritorio\proyecto laboratorio Java\data
 El dataset está compuesto por 8 columnas, con la siguiente descripción:
 
-* **columna Brand**: de tipo XXX, representa....
-* **columna 2**: de tipo XXX, representa....
+**columna OrderDate**: de tipo LocalDate, representa la fecha de venta del Sneaker.
+**columna Brand**: de tipo String, representa la marca del Sneaker.
+**columna Sneaker Name**: de tipo String, representa el nombre del Sneaker.
+**columna Sale Price** : de tipo Integer, representa el precio de venta del Sneaker.
+**columna Retail Price**: de tipo Integer, representa el precio de retail del Sneaker.
+**columna Release Date**: de tipo LocalDate, representa la fecha de salida al mercado del Sneaker.
+**columna Shoe Size**: de tipo Double, representa la talla del Sneaker.
+**columna Buyer Region**: de tipo String, representa la region del comprador.
+
 ....
 
 ## Tipos implementados
@@ -47,8 +54,8 @@ Descripción breve del tipo base.
 
 **Restricciones**:
  
-- R1: Descripción de la restricción 1.
-- R2: Descripción de la restricción 2.
+- R1: La fecha de reventa  debe ser posterior a 2019.
+- R2: El precio de retail no puede ser 0.
 - ...
 - 
 **Criterio de igualdad**: Describir el criterio de igualdad
